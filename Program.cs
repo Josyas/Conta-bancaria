@@ -14,10 +14,10 @@ namespace Exercicio_Conta_Bancaria {
             
             Console.Write("Haverá deposito (S/N) ");
             string hdeposito = Console.ReadLine();
-            if (hdeposito == "S") {
+            if (hdeposito == "S" || hdeposito == "s" ) {
                 Console.Write("Entre o valor de deposito inicial: ");
-                double qtee = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                p.Deposito(qtee);
+                double depositoinicial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                p.Deposito(depositoinicial);
                 Console.WriteLine("Dados da conta autalizados:");
                 Console.WriteLine(p);
             }
@@ -28,15 +28,15 @@ namespace Exercicio_Conta_Bancaria {
 
             Console.WriteLine();
             Console.Write("Depositar: ");
-            double qte = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            p.Deposito(qte);
+            double depositar = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            p.Deposito(depositar);
             Console.WriteLine("Dados da conta autalizados:");
             Console.WriteLine(p);
             
             Console.WriteLine();
             Console.Write("Entre um valor para saque: ");
-            qte = double.Parse(Console.ReadLine());
-            p.Saque(qte);
+            double sacar = double.Parse(Console.ReadLine());
+            p.Saque(sacar);
             Console.WriteLine("Dados da conta");
             Console.WriteLine(p);
 
